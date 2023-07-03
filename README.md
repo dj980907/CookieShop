@@ -1,22 +1,12 @@
-# Cookie Shop Assignment
+# Cookie Shop
 
-Your assignment today is to create a virtual cookie shop. You will do this by writing code into a file named `cookie_shop.py`. Several function definitions are indicated in that file with documentation - you must complete these functions. Your program must use each of the functions indicated here to perform the tasks they are designed to perform.
-
-A file named `main.py` is given to you. The code in this file must not be modified. You must write your code in `cookie_shop.py` such that running the `main.py` file runs the entire program.
-
-**Extra credit** -
-There is an advanced version of this assignment that you can optionally attempt. All extra credit requirements are indicated following the basic requirements. If doing the extra credit, be sure to...
-
-1. Complete the basic assignment in the given file named `cookie_shop.py`. You can use the automated tests included in the given code to make sure your basic version works perfectly before proceeding.
-2. Complete the extra-credit version in a separate file named `cookie_shop_extra_credit.py`. There are no automated tests to help you with this version. Feel free to update `main.py` to import your extra credit version, rather than the basic version, so you can run and debug it more easily.
+This is a virtual cookie shop where users can order all kinds of cookies!
 
 ## Cookie inventory
 
-The cookie shop has an inventory of at least **10 different kinds of cookies**. A data file named `cookies.csv` is given - feel free to add more cookies to it, but do not modify or remove any lines already in the file. Each cookie has a unique `id`, a `title`, `description`, and `price` associated with it.
-
-### Extra credit
-
-Each cookie is also marked as to whether it is `sugar free`, `gluten free`, or `contains nuts` for those with diabetes or allergies. You must add these fields to the existing lines within the given `cookies.csv` file. Do not otherwise modify any of the existing lines in this file.
+The cookie shop has an inventory of at least **10 different kinds of cookies**. 
+A data file named `cookies.csv` contains id, name, description, and price associated with each cookie.
+Each cookie is also marked as to whether it is `sugar free`, `gluten free`, or `contains nuts` for those with diabetes or allergies. 
 
 ## Welcome message
 
