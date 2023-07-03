@@ -17,8 +17,6 @@ Welcome to the Python Cookie Shop!
 We feed each according to their need.
 ```
 
-### Extra credit
-
 The welcome message additionally asks the user questions whether they have any allergies to nuts or gluten, and whether they are avoiding sugar.
 
 Here is sample of the additional output for this version, including example responses from the user.
@@ -34,32 +32,7 @@ Do you suffer from diabetes? yes
 ## List of cookies
 
 The program then outputs a user-friendly list of the cookies in the shop.
-
-Sample output:
-
-```
-Here are the cookies we have in the shop for you:
-
-#1 - Basboosa Semolina Cake
-This is a This is a traditional Middle Eastern dessert made with semolina and yogurt then soaked in a rose water syrup.
-Price: $3.99
-
-#2 - Vanilla Chai Cookie
-Crisp with a smooth inside. Rich vanilla pairs perfectly with its Chai partner a combination of cinnamon ginger and cloves. Can you think of a better way to have your coffee AND your Vanilla Chai in the morning?
-Price: $5.50
-
-#3 - Fudge Strip Cookie
-Everyone needs to experience this one ' with the flavors of a soft baked cookie the 'fudge stripe' is our excuse for adding the perfect amount of rich decadent chocolate.
-Price: $5.78
-
-#4 - Animal Cupcake
-Go wild and choose from a set of animal faces or one animal face printed on edible sugar paper.
-Price: $0.99
-```
-
-### Extra credit
-
-Rather than showing all the cookies in the store, as the default version does, the extra credit version must output a user-friendly list of only those cookies that match the user's dietary needs.
+Rather than showing all the cookies in the store, it outputs a user-friendly list of only those cookies that match the user's dietary needs.
 
 For example, a user with a gluten allergy should be shown only those cookies without gluten. And likewise for sugar and nuts.
 
@@ -112,8 +85,6 @@ Thank you!
 
 Except for the first line, which contains field headings, each line in the `cookies.csv` data file contains information about one cookie. The program must read the data from this file once at the beginning of running the program, and store the data found in the file into the appropriate data structures in the memory of the program.
 
-The subsequent sections in this document explain the appropriate data structures to use.
-
 ## One dictionary per cookie
 
 The data for each cookie must be stored as a dictionary. The dictionary must have keys for `id`, `title`, `description`, and `price`.
@@ -122,7 +93,8 @@ The data for each cookie must be stored as a dictionary. The dictionary must hav
 - The value of '`title`' must be a String.
 - The value of '`description`' must be a String.
 - The value of '`price`' must be a Float with two decimal points.
-
+- The dictionary must also have additional keys for '`sugar_free`', '`gluten_free`', and '`contains_nuts`'. Each should have a boolean value associated with it.
+  
 For example, here is what a dictionary with data for one cookie would look like, if the values were written as literals in the code, rather than pulled from the data file:
 
 ```python
@@ -134,15 +106,9 @@ For example, here is what a dictionary with data for one cookie would look like,
 }
 ```
 
-### Extra credit
-
-- The dictionary must also have additional keys for '`sugar_free`', '`gluten_free`', and '`contains_nuts`'. Each should have a boolean value associated with it.
-
 ## Dictionaries stored in a list
 
 All dictionaries representing individual cookies must be stored together as elements in a list. In other words, there is a single list that contains all the 10 or more cookie dictionaries.
-
-For example, here is what the list with data for all cookies would look like, if the values were written as literals in the code, rather than pulled from the data file:
 
 ```python
 [
@@ -169,11 +135,3 @@ All user input data must be validated. If the user enters inappropriate data, th
 - The `id` number of the cookie the user would like to order must be entered as an integer (e.g. `4`). This integer must be an actual `id` for a cookie in the cookie shop.
 - The quantity of an ordered cookie must be an integer.
 - The words '`finished`', '`done`', '`quit`', or '`exit`' in response to the request for the user to enter an additional cookie `id` must trigger the program to stop asking the user for more orders and continue to show them the total price for their order.
-
-### Extra credit
-
-- The response to questions about allergies or diabetes must be either '`yes`', '`y`', '`no`', or '`n`'.
-
-## Submitting
-
-If you are completing the extra credit version, you must send this fact as a message to the graders.
